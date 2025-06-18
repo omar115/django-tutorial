@@ -1,11 +1,5 @@
 # render.yaml
 
-databases:
-  - name: mysitedb
-    plan: free
-    databaseName: mysite
-    user: mysite
-
 services:
   - type: web
     name: mysite
