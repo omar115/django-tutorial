@@ -84,11 +84,25 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default='postgresql://postgres:postgres@localhost:5432/mysite',
+#         conn_max_age=600
+#     )
+# }
+
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
-        conn_max_age=600
-    )
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'mysitedb',
+    'USER': 'mysitedb_owner',
+    'PASSWORD': 'npg_5XGMSitpRuk1',
+    'HOST': 'ep-ancient-water-a5faon1s-pooler.us-east-2.aws.neon.tech',
+    'PORT': 5432,
+    'OPTIONS': {
+        'sslmode': 'require',
+    },
+  }
 }
 
 
