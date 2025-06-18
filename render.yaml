@@ -4,7 +4,7 @@ services:
   - type: web
     name: mysite
     plan: free
-    env: python-3.10.10
+    env: python
     buildCommand: ./build.sh
     startCommand: python -m gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker
     envVars:
